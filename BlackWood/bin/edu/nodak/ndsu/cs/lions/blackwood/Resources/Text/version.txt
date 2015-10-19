@@ -1,0 +1,4 @@
+Welcome to Blackwood!
+
+For more information, go to lions.cs.ndsu.nodak.edu.
+Report all bugs at wwwic.ndsu.edu/bugzilla.

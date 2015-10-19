@@ -1,0 +1,25 @@
+To Order Products:
+
+This page tells you how to order products correctly for your store so follow the directions and how fun playing Blackwood.
+
+Step One: Click on the "Order" button to bring up the order window which will allow you to select from a number of columns.
+
+Step Two: Once you are in the Order window the first column is the Item column. To select an item you would like to order just simply click on it. By clicking on any item the row will be highlighted so you know which item you are on.
+
+The Picture column is where you will see a picture of what your item will look like if you were to order it.
+
+The Price column will already have the price of the item you have selected.
+
+Step Three: The Quantity column will give you a drop down menu to select the quantity you would like to order. You may also type in a quantity from the drop down list if you would like.
+
+    * Note: If you select a quantity, this does not mean that you have ordered your item yet.
+
+Step Four: The Check to Order column will have a box for you to click in to select which will then give you a subtotal of the cost of your item along with the number of funds you will have remaining after the order is sent.
+
+Step Five: To order your item simply click on the Order button at the bottom of the page and your order will be sent.
+
+    * Note: If you would like to order more than one item simply click on a different row and Repeat Steps Two, Three, and Four. Make sure you do not click on the Order button until you know you have selected all the items that you want to order along with making sure they all have a quantity and are checked in the Check to Order column.
+
+To Cancel your order simply click on the Cancel button .
+
+Your order should be delivered to your store within 7-10 business days. Remember to allow extra time for holidays.

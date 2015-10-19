@@ -1,0 +1,81 @@
+<!-- Ant Build File for Jenkins -->
+<!-- 2011/04/13 Christopher Roemmich -->
+<project name="Blackwood" default="zip" basedir=".">
+	<description>Ant file for the Blackwood project</description>
+
+	<!-- Define Properties -->
+	<property name="path.src" location="src" />
+	<property name="path.build" location="build" />
+	<property name="path.dist" location="dist" />
+	<property name="path.lib" location="lib" />
+	<property name="compile.debug" value="false" />
+	<property name="compile.deprecation" value="false" />
+	<property name="compile.jdk-version.source" value="1.6" />
+	<property name="compile.jdk-version.target" value="1.6" />
+
+	<!-- Class Paths -->
+	<path id="compile.classpath">
+		<fileset dir="${path.lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<path id="build.classpath">
+		<fileset dir="">
+			<include name="lib/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Init -->
+	<target name="init">
+		<tstamp />
+		<mkdir dir="${path.build}" />
+	</target>
+
+	<!-- Compile The Source -->
+	<target name="compile" depends="init" description="compile the source ">
+		<javac debug="${compile.debug}" deprecation="${compile.deprecation}" srcdir="${path.src}" destdir="${path.build}" target="${compile.jdk-version.target}" source="${compile.jdk-version.source}">
+			<classpath refid="compile.classpath" />
+		</javac>
+		<copy todir="${path.build}">
+			<fileset dir="${path.src}" excludes="**/*.java,**/*.form" />
+		</copy>
+	</target>
+
+	<!-- Make the Jar -->
+	<target name="dist" depends="clean,compile" description="generate the distribution">
+		<mkdir dir="${path.dist}" />
+
+		<!-- Generate Class-Path Menifest Property -->
+		<pathconvert property="manifest.libs" pathsep=" ">
+			<path refid="build.classpath" />
+			<mapper>
+				<chainedmapper>
+					<flattenmapper />
+					<globmapper from="*.jar" to="lib/*.jar" />
+				</chainedmapper>
+			</mapper>
+		</pathconvert>
+
+		<jar jarfile="${path.dist}/Blackwood.jar" basedir="${path.build}">
+			<manifest>
+				<attribute name="Main-Class" value="edu.nodak.ndsu.cs.lions.blackwood.Main" />
+				<attribute name="Class-Path" value="${manifest.libs}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<!-- Clean Up -->
+	<target name="clean" description="clean up">
+		<delete dir="${path.build}" />
+		<delete dir="${path.dist}" />
+	</target>
+  
+	<!-- Zip the Distribution and Libs -->
+	<target name="zip" depends="dist" description="generate a zip file distribution">
+		<zip destfile="${path.dist}/Blackwood.zip">
+			<zipfileset dir="${path.dist}" includes="Blackwood.jar" fullpath="blackwood.jar" />
+			<zipfileset dir="${path.lib}" prefix="lib" />
+		</zip>
+	</target>
+</project>

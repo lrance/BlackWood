@@ -1,0 +1,16 @@
+K 10
+svn:ignore
+V 41
+build
+dist
+.settings
+.classpath
+.project
+
+K 13
+svn:mergeinfo
+V 103
+/branches/CS345_Spring2011:80-115
+/branches/CS345_Spring2012:116-147
+/branches/CS345_Spring2013:149-152
+END

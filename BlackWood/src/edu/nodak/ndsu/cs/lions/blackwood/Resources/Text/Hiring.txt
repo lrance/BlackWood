@@ -1,0 +1,19 @@
+All businesses need an employee to function.
+
+To hire an employee:
+
+• Click on the "Hiring" button. (This button is located on the home page.)
+
+• Choose a wage to offer (per week) from the drop down menu.
+
+NOTE: the higher the wage, the higher the level of service in your store.
+
+• Click on the "Advertise" button. This places your ad in the help wanted section of the paper. If there are any available applicants for this wage amount, their names will appear in the box under "Applicants."
+
+NOTE: If no names appear, there are no available applicants for this wage amount. You will need to choose a higher wage and repeat this step).
+
+• Select a name in the "Applicants" box. (If you click on an employee name their resume and picture will appear in the corresponding box, if available.)
+
+•Once you have made a selection click on the "Hire" button. Your employee will now appear in your store.
+
+NOTE: Hiring a new employee will replace(fire) your existing employee.
